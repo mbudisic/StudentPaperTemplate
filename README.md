@@ -1,5 +1,5 @@
-`paper/` contains all the LaTeX files.
-`code/` should contain MATLAB, Python, etc. code needed to regenerate images.
+  - `paper/` contains all the LaTeX files.
+  - `code/` should contain MATLAB, Python, etc. code needed to regenerate images.
 
 Feel free to add other (sub)folders as needed, but don't go too wild.
 
