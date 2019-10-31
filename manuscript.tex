@@ -58,7 +58,19 @@ Great stuff.
 
 \section{Main technique}
 
+\subsection{Theory}
+
+\subsection{Implementation}
+
+This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
+\begin{lstlisting}[language=Matlab]
+for k = 2:9
+    u[k] = u[k-1] - 2*u[k] + u[k+1];
+end
+\end{lstlisting}
+
 \section{Results}
+
 
 Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots see \url{http://pgfplots.sourceforge.net/gallery.html}}
 
@@ -147,12 +159,6 @@ Most people get matrices wrong (overly complicated) in \LaTeX. This is the right
 More details are here:
 \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics\#Matrices_and_arrays}.
 
-This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
-\begin{lstlisting}[language=Matlab]
-for k = 2:9
-    u[k] = u[k-1] - 2*u[k] + u[k+1];
-end
-\end{lstlisting}
 
 LaTeX (with help of pgfplot) can also create graphs of functions.
 \begin{figure}[htb]\centering
