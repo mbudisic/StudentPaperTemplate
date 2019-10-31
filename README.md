@@ -1,2 +1,0 @@
-# StudentPaperTemplate
-Student Paper Template
