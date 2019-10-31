@@ -1,0 +1,67 @@
+\documentclass{amsart}
+
+\usepackage{amsmath, amsthm, amssymb} %AMS math
+
+\usepackage{graphicx}% Include figure files
+\usepackage{bm}% bold math
+\usepackage{color} % colored text
+\usepackage[pdftex,colorlinks=true,
+allcolors=blue
+]{hyperref}% add hypertext capabilities
+\usepackage{paralist}% for compactitem used by Marko
+\usepackage{multirow}% multicolumn/row cells in tables
+
+\usepackage{url} % add auto-linked urls
+\usepackage{mathtools} % shortintertext, and other useful math-related features
+\usepackage{siunitx}
+\sisetup{per-mode = symbol}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{amsrefs} % references
+
+\graphicspath{{figs/}} % store figures in figs subfolder
+
+%% comments
+\newcommand{\marko}[1]{\textcolor{red}{(MB: {\bfseries #1})}}
+\newcommand{\yourname}[1]{\textcolor{red}{(STUDENT: {\bfseries #1})}}
+
+\begin{document}
+
+\title{Title of our paper}
+
+\author{First Last}
+\address{Department of Mathematics, Clarkson University,
+Potsdam, NY}
+\email{email@clarkson.edu}
+
+\author{Marko Budi\v{s}i\'c}
+\address{Department of Mathematics, Clarkson University,
+Potsdam, NY}
+\email{mbudisic@clarkson.edu}
+\urladdr{http://people.clarkson.edu/~mbudisic} % Delete if not wanted.
+
+\begin{abstract}
+Great stuff.
+\end{abstract}
+
+\maketitle % typeset the title page
+\tableofcontents % table of contents
+
+
+\section{Introduction}
+
+\section{Problem description}
+
+\section{Main technique}
+
+\section{Results}
+
+\section{Discussion and Conclusions}
+
+Example of a cited paper \cite{Hill1894}.
+
+\bibliography{bibliography} % bibliography.bib stores references
+
+
+
+\end{document}
