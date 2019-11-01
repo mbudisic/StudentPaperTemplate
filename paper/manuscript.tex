@@ -54,6 +54,13 @@ Great stuff.
 
 \section{Introduction}
 
+\begin{itemize}
+\item motivation for the problem
+\item discussion of existing results in literature, covering all aspects of the paper
+\item announcement of the original contribution
+\item short outline of the paper sections (Section 1 does this, Section 2 does that, etc.)
+\end{itemize}
+
 \section{Problem description}
 
 \section{Main technique}
@@ -62,36 +69,9 @@ Great stuff.
 
 \subsection{Implementation}
 
-This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
-\begin{lstlisting}[language=Matlab]
-for k = 2:9
-    u[k] = u[k-1] - 2*u[k] + u[k+1];
-end
-\end{lstlisting}
-
 \section{Results}
 
-
-Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots see \url{http://pgfplots.sourceforge.net/gallery.html}}
-
-\begin{figure}[htb]
-  \centering
-  \begin{tikzpicture}
-\begin{axis}[width=0.8\linewidth, height=0.55\linewidth,
-  enlargelimits=0.15,
-  xmin=-5,xmax=5, mark size=1.5pt,
-  legend pos = north west, legend style={fill=none,draw=none},
-  yticklabel style={/pgf/number format/.cd,fixed,precision=2},
-  xlabel={Value}, ylabel={Proportion} % labels
-  ]
-  \addplot+ table[x=Value, y=Proportion, col sep=comma]{figs/dataset.csv};
-\end{axis}
-\end{tikzpicture}
-\caption{Graph made directly in LaTeX.}\label{fig:csvfig}
-\end{figure}
 \section{Discussion and Conclusions}
-
-Example of a cited paper \cite{Hill1894}.
 
 \bibliography{bibliography} % bibliography.bib stores references
 
@@ -177,6 +157,33 @@ LaTeX (with help of pgfplot) can also create graphs of functions.
      \end{axis}
    \end{tikzpicture}
  \end{figure}
+
+ This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
+\begin{lstlisting}[language=Matlab]
+for k = 2:9
+    u[k] = u[k-1] - 2*u[k] + u[k+1];
+end
+\end{lstlisting}
+
+Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots see \url{http://pgfplots.sourceforge.net/gallery.html}}
+
+\begin{figure}[htb]
+  \centering
+  \begin{tikzpicture}
+\begin{axis}[width=0.8\linewidth, height=0.55\linewidth,
+  enlargelimits=0.15,
+  xmin=-5,xmax=5, mark size=1.5pt,
+  legend pos = north west, legend style={fill=none,draw=none},
+  yticklabel style={/pgf/number format/.cd,fixed,precision=2},
+  xlabel={Value}, ylabel={Proportion} % labels
+  ]
+  \addplot+ table[x=Value, y=Proportion, col sep=comma]{figs/dataset.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Graph made directly in LaTeX.}\label{fig:csvfig}
+\end{figure}
+
+Example of a cited paper \cite{Hill1894}.
 
  Some \textbf{important formatting tips}:
 \begin{compactitem}
