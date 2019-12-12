@@ -156,16 +156,8 @@ LaTeX (with help of pgfplot) can also create graphs of functions.
      \end{axis}
    \end{tikzpicture}
  \end{figure}
-
- \subsection{Syntax-highlighted code}
- This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
-\begin{lstlisting}[language=Matlab]
-for k = 2:9
-    u[k] = u[k-1] - 2*u[k] + u[k+1];
-end
-\end{lstlisting}
-
-Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots see \url{http://pgfplots.sourceforge.net/gallery.html}}
+ 
+ Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots see \url{http://pgfplots.sourceforge.net/gallery.html}}
 
 \begin{figure}[htb]
   \centering
@@ -183,11 +175,19 @@ Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots 
 \caption{Graph made directly in LaTeX.}\label{fig:csvfig}
 \end{figure}
 
+ \subsection{Syntax-highlighted code}
+ This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
+\begin{lstlisting}[language=Matlab]
+for k = 2:9
+    u[k] = u[k-1] - 2*u[k] + u[k+1];
+end
+\end{lstlisting}
+
 \subsection{Citing papers}
 
 References are stored in \texttt{.bib} files. Instead of writing the bib file manually, it's best to install JabRef \url{http://www.jabref.org/} , BibDesk or another reference manager to edit the file.
 
-To include a citation, enter |\cite{Hill1894}| where Hill1894 is the paper label designated in the bib file.
+To include a citation, enter \verb|\cite{Hill1894}| where Hill1894 is the paper label designated in the bib file.
 
 
  \subsection{Some \textbf{important formatting tips}:}
