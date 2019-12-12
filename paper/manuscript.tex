@@ -75,29 +75,13 @@ Great stuff.
 
 \bibliography{bibliography} % bibliography.bib stores references
 
-Instead of writing the bib file manually, it's best to install JabRef \url{http://www.jabref.org/} , BibDesk or another reference manager to edit the file.
-
 \clearpage \appendix
 
 \section{How to use LaTeX?}
 
-Example of notes. Some math $\int_0^Tx(t)dt$. If you'd like to put an equation in its own line, this is how you do it:
-\begin{equation}
-x(t) = x_0 + \int_0^T f(x(\tau))d\tau  \label{eq:ode-solution}
-\end{equation}
-
-
-You can also refer to an equation that you made, if you gave it a label, just like this \eqref{eq:ode-solution}.
-
-If you want to include an image, this is how you do it. And you can also refer to the Figure~\ref{fig:graph}.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.2\linewidth]{figs/graph.png}
-  \caption{This is a graph.}\label{fig:graph}
-\end{figure}
+\subsection{General advice}
 
 \textbf{  All the help you need is found here: \url{https://en.wikibooks.org/wiki/LaTeX}. }
-
 
 You can create a bulleted list
 \begin{itemize}
@@ -106,11 +90,6 @@ You can create a bulleted list
 \item Third
 \end{itemize}
 
-
-\begin{figure}
-  \includegraphics[width=0.5\linewidth]{figs/graph.png}
-  \caption{Image}
-\end{figure}
 You can also enumerate
 \begin{enumerate}
 \item First
@@ -131,6 +110,16 @@ If you want a tighter itemization, use \verb|compactitem| and \verb|compactenum|
 \item Third
 \end{compactenum}
 
+\subsection{Mathematics}
+Some math $\int_0^Tx(t)dt$. If you'd like to put an equation in its own line, this is how you do it:
+\begin{equation}
+x(t) = x_0 + \int_0^T f(x(\tau))d\tau  \label{eq:ode-solution}
+\end{equation}
+
+
+You can also refer to an equation that you made, if you gave it a label, just like this \eqref{eq:ode-solution}.
+
+
 Most people get matrices wrong (overly complicated) in \LaTeX. This is the right way:
 \[ %this produces unenumerated equation.
   \begin{bmatrix}
@@ -141,6 +130,14 @@ Most people get matrices wrong (overly complicated) in \LaTeX. This is the right
 More details are here:
 \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics\#Matrices_and_arrays}.
 
+\subsection{Graphs directly in \LaTeX}
+
+If you want to include an image, this is how you do it. And you can also refer to the Figure~\ref{fig:graph}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.2\linewidth]{figs/graph.png}
+  \caption{This is a graph.}\label{fig:graph}
+\end{figure}
 
 LaTeX (with help of pgfplot) can also create graphs of functions.
 \begin{figure}[htb]\centering
@@ -160,6 +157,7 @@ LaTeX (with help of pgfplot) can also create graphs of functions.
    \end{tikzpicture}
  \end{figure}
 
+ \subsection{Syntax-highlighted code}
  This is how you include some code\footnote{For more see \url{https://www.overleaf.com/learn/latex/Code_listing\#Using_listings_to_highlight_code}.}:
 \begin{lstlisting}[language=Matlab]
 for k = 2:9
@@ -185,10 +183,16 @@ Figure~\ref{fig:csvfig} was made purely in \LaTeX.\footnote{For more such plots 
 \caption{Graph made directly in LaTeX.}\label{fig:csvfig}
 \end{figure}
 
-Example of a cited paper \cite{Hill1894}.
+\subsection{Citing papers}
 
- Some \textbf{important formatting tips}:
-\begin{compactitem}
+References are stored in \texttt{.bib} files. Instead of writing the bib file manually, it's best to install JabRef \url{http://www.jabref.org/} , BibDesk or another reference manager to edit the file.
+
+To include a citation, enter |\cite{Hill1894}| where Hill1894 is the paper label designated in the bib file.
+
+
+ \subsection{Some \textbf{important formatting tips}:}
+ \begin{compactitem}
+ \item \textbf{Each sentence on its own line.} This helps with version control.
 \item Please make sure to use operator notation (with backslashes) when appropriate.\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/Mathematics\#Operators}}
 \item There's a lot of bad advice on how to write matrices. Here's the correct way: \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics\#Matrices_and_arrays}
 \item Mixing text and equations is another sore spot: \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics\#Adding_text_to_equations}
@@ -196,6 +200,7 @@ Example of a cited paper \cite{Hill1894}.
 \item Annotating parts of equations using braces \url{https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics\#Above_and_below}
 \item Never use manual linebreak \verb|\\| in text (outside \verb|align|,\verb|bmatrix| and other similar multiline formula environments). If you think you need it, you're wrong.\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting\#Manual_breaks}} Instead use an empty line (to break a paragraph), or displayed equations using a pair of \verb|$$| or \verb|\[|,\verb|\]| (preferred).
 \end{compactitem}
+
 
 
 \end{document}
