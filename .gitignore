@@ -241,3 +241,13 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+# emacs temp files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
